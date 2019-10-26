@@ -3,7 +3,8 @@ unit U_DataM;
 interface
 
 uses
-  SysUtils, Classes, DB, DBTables;
+  SysUtils, Classes, DB, DBTables, DBIProcs;
+  //BDIProcs unit utilizada para controle do Paradox
 
 type
   TDM = class(TDataModule)
@@ -31,6 +32,7 @@ type
     Table1Telefone_Residencial: TStringField;
     Table1Telefone_Comercial: TStringField;
     Table1Telefone_Celular: TStringField;
+    procedure Table1AfterPost(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -42,6 +44,15 @@ var
 
 implementation
 
+uses BDE;
+
 {$R *.dfm}
+
+procedure TDM.Table1AfterPost(DataSet: TDataSet);
+begin
+  DbiSaveChanges(Table1.Handle);
+  //comando utilizado para fazer commit, no paradox (BDE Administrator)
+  //Não funciona para as outras DBs
+end;
 
 end.

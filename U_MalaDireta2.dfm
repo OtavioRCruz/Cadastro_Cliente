@@ -1,6 +1,6 @@
 object MalaDireta2: TMalaDireta2
-  Left = 254
-  Top = 171
+  Left = 290
+  Top = 159
   Width = 928
   Height = 480
   Caption = 'MalaDireta2'
@@ -24,6 +24,7 @@ object MalaDireta2: TMalaDireta2
     Frame.DrawBottom = False
     Frame.DrawLeft = False
     Frame.DrawRight = False
+    DataSet = DM.Table1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -103,7 +104,7 @@ object MalaDireta2: TMalaDireta2
         FontSize = 10
       end
       object QRDBText2: TQRDBText
-        Left = 123
+        Left = 122
         Top = 6
         Width = 19
         Height = 12
@@ -114,7 +115,7 @@ object MalaDireta2: TMalaDireta2
         Frame.DrawRight = False
         Size.Values = (
           45.357142857142860000
-          464.910714285714300000
+          461.130952380952400000
           22.678571428571430000
           71.815476190476190000)
         Alignment = taLeftJustify

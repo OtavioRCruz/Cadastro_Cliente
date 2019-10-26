@@ -1,9 +1,9 @@
-object MalaDireta2: TMalaDireta2
-  Left = 254
-  Top = 171
+object MalaDireta3: TMalaDireta3
+  Left = 249
+  Top = 207
   Width = 928
   Height = 480
-  Caption = 'MalaDireta2'
+  Caption = 'MalaDireta3'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,7 +16,7 @@ object MalaDireta2: TMalaDireta2
   TextHeight = 13
   object QuickRep1: TQuickRep
     Left = 0
-    Top = 0
+    Top = -8
     Width = 556
     Height = 786
     Frame.Color = clBlack
@@ -39,7 +39,7 @@ object MalaDireta2: TMalaDireta2
       '0'
       #39#39)
     Options = [FirstPageHeader, LastPageFooter]
-    Page.Columns = 2
+    Page.Columns = 3
     Page.Orientation = poPortrait
     Page.PaperSize = A4
     Page.Values = (
@@ -62,7 +62,7 @@ object MalaDireta2: TMalaDireta2
     object DetailBand1: TQRBand
       Left = 26
       Top = 26
-      Width = 251
+      Width = 167
       Height = 41
       Frame.Color = clBlack
       Frame.DrawTop = False
@@ -75,7 +75,7 @@ object MalaDireta2: TMalaDireta2
       ForceNewPage = False
       Size.Values = (
         154.970238095238100000
-        948.720238095238100000)
+        631.220238095238100000)
       BandType = rbDetail
       object QRDBText1: TQRDBText
         Left = 6
@@ -99,13 +99,13 @@ object MalaDireta2: TMalaDireta2
         Color = clWhite
         DataSet = DM.Table1
         DataField = 'Nome'
-        Transparent = False
+        Transparent = True
         WordWrap = True
         FontSize = 10
       end
       object QRDBText2: TQRDBText
-        Left = 123
-        Top = 6
+        Left = 6
+        Top = 15
         Width = 19
         Height = 12
         Frame.Color = clBlack
@@ -115,8 +115,8 @@ object MalaDireta2: TMalaDireta2
         Frame.DrawRight = False
         Size.Values = (
           45.357142857142860000
-          464.910714285714300000
           22.678571428571430000
+          56.696428571428570000
           71.815476190476190000)
         Alignment = taLeftJustify
         AlignToBand = False
@@ -125,14 +125,14 @@ object MalaDireta2: TMalaDireta2
         Color = clWhite
         DataSet = DM.Table1
         DataField = 'CPF'
-        Transparent = False
+        Transparent = True
         WordWrap = True
         FontSize = 10
       end
       object QRDBText3: TQRDBText
         Left = 6
-        Top = 15
-        Width = 39
+        Top = 24
+        Width = 67
         Height = 12
         Frame.Color = clBlack
         Frame.DrawTop = False
@@ -142,94 +142,16 @@ object MalaDireta2: TMalaDireta2
         Size.Values = (
           45.357142857142860000
           22.678571428571430000
-          56.696428571428570000
-          147.410714285714300000)
+          90.714285714285710000
+          253.244047619047600000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
         AutoStretch = False
         Color = clWhite
         DataSet = DM.Table1
-        DataField = 'Endereco'
-        Transparent = False
-        WordWrap = True
-        FontSize = 10
-      end
-      object QRDBText4: TQRDBText
-        Left = 121
-        Top = 15
-        Width = 25
-        Height = 12
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
-        Size.Values = (
-          45.357142857142860000
-          457.351190476190500000
-          56.696428571428570000
-          94.494047619047620000)
-        Alignment = taLeftJustify
-        AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
-        Color = clWhite
-        DataSet = DM.Table1
-        DataField = 'Bairro'
-        Transparent = False
-        WordWrap = True
-        FontSize = 10
-      end
-      object QRDBText5: TQRDBText
-        Left = 6
-        Top = 27
-        Width = 29
-        Height = 12
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
-        Size.Values = (
-          45.357142857142860000
-          22.678571428571430000
-          102.053571428571400000
-          109.613095238095200000)
-        Alignment = taLeftJustify
-        AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
-        Color = clWhite
-        DataSet = DM.Table1
-        DataField = 'Cidade'
-        Transparent = False
-        WordWrap = True
-        FontSize = 10
-      end
-      object QRDBText6: TQRDBText
-        Left = 121
-        Top = 27
-        Width = 20
-        Height = 12
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
-        Size.Values = (
-          45.357142857142860000
-          457.351190476190500000
-          102.053571428571400000
-          75.595238095238100000)
-        Alignment = taLeftJustify
-        AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
-        Color = clWhite
-        DataSet = DM.Table1
-        DataField = 'CEP'
-        Transparent = False
+        DataField = 'Telefone_Celular'
+        Transparent = True
         WordWrap = True
         FontSize = 10
       end

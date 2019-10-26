@@ -1,12 +1,13 @@
 object DM: TDM
   OldCreateOrder = False
-  Left = 939
-  Top = 121
+  Left = 534
+  Top = 178
   Height = 231
   Width = 306
   object Table1: TTable
     Active = True
-    DatabaseName = 'Cad_cli'
+    AfterPost = Table1AfterPost
+    DatabaseName = 'Cad_Cli'
     TableName = 'Cad_Cli_DB.db'
     Left = 32
     Top = 16
@@ -92,14 +93,17 @@ object DM: TDM
     end
     object Table1Telefone_Residencial: TStringField
       FieldName = 'Telefone_Residencial'
+      EditMask = '!\(99\)0000-0000;1;_'
       Size = 14
     end
     object Table1Telefone_Comercial: TStringField
       FieldName = 'Telefone_Comercial'
+      EditMask = '!\(99\)0000-0000;1;_'
       Size = 14
     end
     object Table1Telefone_Celular: TStringField
       FieldName = 'Telefone_Celular'
+      EditMask = '!\(99\)00000-0000;1;_'
       Size = 14
     end
   end

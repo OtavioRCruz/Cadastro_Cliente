@@ -1,12 +1,13 @@
 object DM: TDM
   OldCreateOrder = False
-  Left = 939
-  Top = 121
+  Left = 534
+  Top = 178
   Height = 231
   Width = 306
   object Table1: TTable
     Active = True
-    DatabaseName = 'Cad_cli'
+    AfterPost = Table1AfterPost
+    DatabaseName = 'Cad_Cli'
     TableName = 'Cad_Cli_DB.db'
     Left = 32
     Top = 16

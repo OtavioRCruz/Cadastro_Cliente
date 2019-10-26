@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus, Buttons, StdCtrls, ExtCtrls;
+  Dialogs, Menus, Buttons, StdCtrls, ExtCtrls, DBTables;
 
 type
   TF_Principal = class(TForm)
@@ -29,12 +29,12 @@ type
     Bevel2: TBevel;
     Image1: TImage;
     GroupBox1: TGroupBox;
-    SpeedButton1: TSpeedButton;
+    btnCadastro: TSpeedButton;
     btnSobre: TSpeedButton;
     btnSair: TSpeedButton;
-    SpeedButton4: TSpeedButton;
-    SpeedButton5: TSpeedButton;
-    SpeedButton6: TSpeedButton;
+    btnConsultas: TSpeedButton;
+    btnRelatorio: TSpeedButton;
+    btnMalaDireta: TSpeedButton;
     PopupMenu1: TPopupMenu;
     Sobre2: TMenuItem;
     N1: TMenuItem;
@@ -43,7 +43,11 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnSobreClick(Sender: TObject);
     procedure btnSairClick(Sender: TObject);
-    procedure SpeedButton1Click(Sender: TObject);
+    procedure btnCadastroClick(Sender: TObject);
+    procedure btnRelatorioClick(Sender: TObject);
+    procedure btnMalaDiretaClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure btnConsultasClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -55,7 +59,7 @@ var
 
 implementation
 
-uses U_About, Unit_Cadastro;
+uses U_About, Unit_Cadastro, U_Relatorio, U_MalaDireta2, U_MalaDireta3;
 
 {$R *.dfm}
 
@@ -75,7 +79,9 @@ end;
 
 procedure TF_Principal.btnSobreClick(Sender: TObject);
 begin
+  AboutBox:=TAboutBox.Create(Self);
   AboutBox.showModal;
+  AboutBox.Free;
 end;
 
 procedure TF_Principal.btnSairClick(Sender: TObject);
@@ -83,9 +89,36 @@ begin
 close;
 end;
 
-procedure TF_Principal.SpeedButton1Click(Sender: TObject);
+procedure TF_Principal.btnCadastroClick(Sender: TObject);
 begin
+  F_Cadastro:=TF_Cadastro.Create(Self);
   F_Cadastro.showmodal;
+  F_Cadastro.Destroy;
+end;
+
+procedure TF_Principal.btnRelatorioClick(Sender: TObject);
+begin
+  Relatorio:=TRelatorio.Create(self);
+  Relatorio.QuickRep1.Preview;
+  Relatorio.Destroy;
+end;
+
+procedure TF_Principal.btnMalaDiretaClick(Sender: TObject);
+begin
+  MalaDireta2:=TMalaDireta2.Create(Self);
+  MalaDireta2.QuickRep1.PreviewModal;
+  MalaDireta2.Destroy;
+end;
+
+procedure TF_Principal.FormCreate(Sender: TObject);
+begin
+  If not Session.IsAlias('Cad_Cli') Then
+  Session.AddStandardAlias('Cad_Cli','C:\Users\Lenovo\Documents\Embarcadero\Studio\Projects 7\Cad_Cli\BD','Paradox');
+end;
+
+procedure TF_Principal.btnConsultasClick(Sender: TObject);
+begin
+  .ShowModal;
 end;
 
 end.

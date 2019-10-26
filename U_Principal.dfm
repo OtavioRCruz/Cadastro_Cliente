@@ -1,10 +1,10 @@
 object F_Principal: TF_Principal
-  Left = 299
-  Top = 143
+  Left = 387
+  Top = 121
   BorderIcons = [biSystemMenu, biMinimize, biHelp]
   BorderStyle = bsSingle
   Caption = 'Cadastro de Clientes'
-  ClientHeight = 522
+  ClientHeight = 505
   ClientWidth = 484
   Color = clGreen
   Font.Charset = DEFAULT_CHARSET
@@ -19,6 +19,7 @@ object F_Principal: TF_Principal
   ShowHint = True
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Bevel1: TBevel
@@ -1448,7 +1449,7 @@ object F_Principal: TF_Principal
     Height = 185
     Caption = 'Menu'
     TabOrder = 1
-    object SpeedButton1: TSpeedButton
+    object btnCadastro: TSpeedButton
       Left = 32
       Top = 24
       Width = 73
@@ -1471,7 +1472,7 @@ object F_Principal: TF_Principal
         3BB33773333773333773B333333B3333333B7333333733333337}
       Layout = blGlyphTop
       NumGlyphs = 2
-      OnClick = SpeedButton1Click
+      OnClick = btnCadastroClick
     end
     object btnSobre: TSpeedButton
       Left = 168
@@ -1521,7 +1522,7 @@ object F_Principal: TF_Principal
       NumGlyphs = 2
       OnClick = btnSairClick
     end
-    object SpeedButton4: TSpeedButton
+    object btnConsultas: TSpeedButton
       Left = 168
       Top = 24
       Width = 73
@@ -1544,8 +1545,9 @@ object F_Principal: TF_Principal
         3000333333333377377733333333333333333333333333333333}
       Layout = blGlyphTop
       NumGlyphs = 2
+      OnClick = btnConsultasClick
     end
-    object SpeedButton5: TSpeedButton
+    object btnRelatorio: TSpeedButton
       Left = 304
       Top = 24
       Width = 73
@@ -1568,8 +1570,9 @@ object F_Principal: TF_Principal
         0033333337FFFFFF773333333000000003333333377777777333}
       Layout = blGlyphTop
       NumGlyphs = 2
+      OnClick = btnRelatorioClick
     end
-    object SpeedButton6: TSpeedButton
+    object btnMalaDireta: TSpeedButton
       Left = 32
       Top = 104
       Width = 73
@@ -1592,6 +1595,7 @@ object F_Principal: TF_Principal
         3333333333333333333333333333333333333333333333333333}
       Layout = blGlyphTop
       NumGlyphs = 2
+      OnClick = btnMalaDiretaClick
     end
   end
   object MainMenu1: TMainMenu
@@ -1601,6 +1605,7 @@ object F_Principal: TF_Principal
       Caption = '&Cadastro'
       object Cliente1: TMenuItem
         Caption = 'C&liente'
+        OnClick = btnCadastroClick
       end
     end
     object Consulta1: TMenuItem
@@ -1613,6 +1618,7 @@ object F_Principal: TF_Principal
       Caption = '&Relatorios'
       object OrdemCodigo1: TMenuItem
         Caption = 'Ordem &Codigo'
+        OnClick = btnRelatorioClick
       end
       object OrdemAlfabetica1: TMenuItem
         Caption = 'Ordem &Alfabetica'
