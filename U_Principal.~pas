@@ -59,7 +59,8 @@ var
 
 implementation
 
-uses U_About, Unit_Cadastro, U_Relatorio, U_MalaDireta2, U_MalaDireta3;
+uses U_About, Unit_Cadastro, U_Relatorio, U_MalaDireta2, U_MalaDireta3,
+  U_Consulta;
 
 {$R *.dfm}
 
@@ -118,7 +119,9 @@ end;
 
 procedure TF_Principal.btnConsultasClick(Sender: TObject);
 begin
-  .ShowModal;
+  F_Consulta:=TF_Consulta.Create(Self);
+  F_Consulta.ShowModal;
+  F_Consulta.Destroy;
 end;
 
 end.

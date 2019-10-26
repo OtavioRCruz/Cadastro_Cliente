@@ -76,7 +76,6 @@ object F_Consulta: TF_Consulta
     Width = 121
     Height = 21
     TabOrder = 4
-    Text = 'Edit1'
     OnChange = Edit1Change
   end
 end
