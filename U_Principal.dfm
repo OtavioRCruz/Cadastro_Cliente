@@ -1612,6 +1612,7 @@ object F_Principal: TF_Principal
       Caption = 'Consul&ta'
       object Dados1: TMenuItem
         Caption = '&Dados'
+        OnClick = btnConsultasClick
       end
     end
     object Relatorios1: TMenuItem

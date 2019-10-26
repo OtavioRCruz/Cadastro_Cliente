@@ -114,7 +114,7 @@ end;
 procedure TF_Principal.FormCreate(Sender: TObject);
 begin
   If not Session.IsAlias('Cad_Cli') Then
-  Session.AddStandardAlias('Cad_Cli','C:\Users\Lenovo\Documents\Embarcadero\Studio\Projects 7\Cad_Cli\BD','Paradox');
+  Session.AddStandardAlias('Cad_Cli','C:\workspace\Cadastro_Cliente\BD','Paradox');
 end;
 
 procedure TF_Principal.btnConsultasClick(Sender: TObject);
