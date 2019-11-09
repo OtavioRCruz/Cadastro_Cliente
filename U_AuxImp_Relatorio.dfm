@@ -1,9 +1,9 @@
-object FormAuxImp: TFormAuxImp
-  Left = 985
-  Top = 141
+object FormAuxImpRelatorio: TFormAuxImpRelatorio
+  Left = 412
+  Top = 202
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'FormAuxImp'
+  Caption = 'FormAuxImpRelatorio'
   ClientHeight = 105
   ClientWidth = 282
   Color = clBtnFace
@@ -69,8 +69,8 @@ object FormAuxImp: TFormAuxImp
     Height = 105
     Caption = 'Menu'
     Items.Strings = (
-      '20 Etiquetas'
-      '30 Etiquetas')
+      'Ordem alfabetica'
+      'Ordem Codigo')
     TabOrder = 0
     OnClick = RadioGroup1Click
   end

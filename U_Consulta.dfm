@@ -40,6 +40,7 @@ object F_Consulta: TF_Consulta
     Width = 545
     Height = 120
     DataSource = DM.DataSource1
+    Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs]
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText

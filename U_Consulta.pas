@@ -36,8 +36,8 @@ begin
   Case RadioGroup1.ItemIndex of
   0:DM.Table1.IndexName:='';
   1:DM.Table1.IndexName:='iNome';
-  2:DM.Table1.IndexName:='CPF';
-  3:DM.Table1.IndexName:='CNPJ';
+  2:DM.Table1.IndexName:='iCPF';
+  3:DM.Table1.IndexName:='iCNPJ';
   end;
 end;
 

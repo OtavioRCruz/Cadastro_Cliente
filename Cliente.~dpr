@@ -18,6 +18,5 @@ begin
   Application.Initialize;
   Application.CreateForm(TF_Principal, F_Principal);
   Application.CreateForm(TDM, DM);
-  Application.CreateForm(TFormAuxImp, FormAuxImp);
   Application.Run;
 end.

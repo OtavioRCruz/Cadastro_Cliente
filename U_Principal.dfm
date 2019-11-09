@@ -1,6 +1,6 @@
 object F_Principal: TF_Principal
-  Left = 387
-  Top = 121
+  Left = 442
+  Top = 111
   BorderIcons = [biSystemMenu, biMinimize, biHelp]
   BorderStyle = bsSingle
   Caption = 'Cadastro de Clientes'
@@ -1619,10 +1619,11 @@ object F_Principal: TF_Principal
       Caption = '&Relatorios'
       object OrdemCodigo1: TMenuItem
         Caption = 'Ordem &Codigo'
-        OnClick = btnRelatorioClick
+        OnClick = OrdemCodigo1Click
       end
       object OrdemAlfabetica1: TMenuItem
         Caption = 'Ordem &Alfabetica'
+        OnClick = OrdemAlfabetica1Click
       end
     end
     object Maladireta1: TMenuItem

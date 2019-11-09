@@ -50,6 +50,8 @@ type
     procedure N201Click(Sender: TObject);
     procedure N301Click(Sender: TObject);
     procedure btnMalaDiretaClick(Sender: TObject);
+    procedure OrdemAlfabetica1Click(Sender: TObject);
+    procedure OrdemCodigo1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -62,7 +64,7 @@ var
 implementation
 
 uses U_About, Unit_Cadastro, U_Relatorio, U_MalaDireta2, U_MalaDireta3,
-  U_Consulta, U_AuxImp;
+  U_Consulta, U_AuxImp, U_AuxImp_Relatorio, U_DataM;
 
 {$R *.dfm}
 
@@ -101,9 +103,9 @@ end;
 
 procedure TF_Principal.btnRelatorioClick(Sender: TObject);
 begin
-  Relatorio:=TRelatorio.Create(self);
-  Relatorio.QuickRep1.Preview;
-  Relatorio.Destroy;
+  FormAuxImpRelatorio:=TFormAuxImpRelatorio.Create(Self);
+  FormAuxImpRelatorio.ShowModal;
+  FormAuxImpRelatorio.Free;
 end;
 
 procedure TF_Principal.FormCreate(Sender: TObject);
@@ -138,6 +140,22 @@ begin
   FormAuxImp:=TFormAuxImp.Create(Self);
   FormAuxImp.ShowModal;
   FormAuxImp.Free;
+end;
+
+procedure TF_Principal.OrdemAlfabetica1Click(Sender: TObject);
+begin
+  DM.Table1.IndexName:='iNome';
+  Relatorio:=TRelatorio.Create(Self);
+  Relatorio.QuickRep1.Preview;
+  Relatorio.Destroy;
+end;
+
+procedure TF_Principal.OrdemCodigo1Click(Sender: TObject);
+begin
+  DM.Table1.IndexName:='';
+  Relatorio:=TRelatorio.Create(Self);
+  Relatorio.QuickRep1.Preview;
+  Relatorio.Destroy;
 end;
 
 end.

@@ -10,7 +10,8 @@ uses
   U_MalaDireta2 in 'U_MalaDireta2.pas' {MalaDireta2},
   U_MalaDireta3 in 'U_MalaDireta3.pas' {MalaDireta3},
   U_Consulta in 'U_Consulta.pas' {F_Consulta},
-  U_AuxImp in 'U_AuxImp.pas' {FormAuxImp};
+  U_AuxImp in 'U_AuxImp.pas' {FormAuxImp},
+  U_AuxImp_Relatorio in 'U_AuxImp_Relatorio.pas' {FormAuxImpRelatorio};
 
 {$R *.res}
 
