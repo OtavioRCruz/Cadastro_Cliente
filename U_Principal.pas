@@ -49,6 +49,7 @@ type
     procedure btnConsultasClick(Sender: TObject);
     procedure N201Click(Sender: TObject);
     procedure N301Click(Sender: TObject);
+    procedure btnMalaDiretaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -61,7 +62,7 @@ var
 implementation
 
 uses U_About, Unit_Cadastro, U_Relatorio, U_MalaDireta2, U_MalaDireta3,
-  U_Consulta;
+  U_Consulta, U_AuxImp;
 
 {$R *.dfm}
 
@@ -130,6 +131,13 @@ begin
   MalaDireta3:=TMalaDireta3.Create(Self);
   MalaDireta3.QuickRep1.PreviewModal;
   MalaDireta3.Destroy;
+end;
+
+procedure TF_Principal.btnMalaDiretaClick(Sender: TObject);
+begin
+  FormAuxImp:=TFormAuxImp.Create(Self);
+  FormAuxImp.ShowModal;
+  FormAuxImp.Free;
 end;
 
 end.

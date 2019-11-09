@@ -1595,6 +1595,7 @@ object F_Principal: TF_Principal
         3333333333333333333333333333333333333333333333333333}
       Layout = blGlyphTop
       NumGlyphs = 2
+      OnClick = btnMalaDiretaClick
     end
   end
   object MainMenu1: TMainMenu

@@ -9,7 +9,8 @@ uses
   U_Relatorio in 'U_Relatorio.pas' {Relatorio},
   U_MalaDireta2 in 'U_MalaDireta2.pas' {MalaDireta2},
   U_MalaDireta3 in 'U_MalaDireta3.pas' {MalaDireta3},
-  U_Consulta in 'U_Consulta.pas' {F_Consulta};
+  U_Consulta in 'U_Consulta.pas' {F_Consulta},
+  U_AuxImp in 'U_AuxImp.pas' {FormAuxImp};
 
 {$R *.res}
 
@@ -17,5 +18,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TF_Principal, F_Principal);
   Application.CreateForm(TDM, DM);
+  Application.CreateForm(TFormAuxImp, FormAuxImp);
   Application.Run;
 end.

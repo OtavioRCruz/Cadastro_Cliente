@@ -35,7 +35,7 @@ procedure TF_Consulta.RadioGroup1Click(Sender: TObject);
 begin
   Case RadioGroup1.ItemIndex of
   0:DM.Table1.IndexName:='';
-  1:DM.Table1.IndexName:='Nome';
+  1:DM.Table1.IndexName:='iNome';
   2:DM.Table1.IndexName:='CPF';
   3:DM.Table1.IndexName:='CNPJ';
   end;
