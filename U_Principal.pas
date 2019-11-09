@@ -45,9 +45,10 @@ type
     procedure btnSairClick(Sender: TObject);
     procedure btnCadastroClick(Sender: TObject);
     procedure btnRelatorioClick(Sender: TObject);
-    procedure btnMalaDiretaClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnConsultasClick(Sender: TObject);
+    procedure N201Click(Sender: TObject);
+    procedure N301Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -104,13 +105,6 @@ begin
   Relatorio.Destroy;
 end;
 
-procedure TF_Principal.btnMalaDiretaClick(Sender: TObject);
-begin
-  MalaDireta2:=TMalaDireta2.Create(Self);
-  MalaDireta2.QuickRep1.PreviewModal;
-  MalaDireta2.Destroy;
-end;
-
 procedure TF_Principal.FormCreate(Sender: TObject);
 begin
   If not Session.IsAlias('Cad_Cli') Then
@@ -122,6 +116,20 @@ begin
   F_Consulta:=TF_Consulta.Create(Self);
   F_Consulta.ShowModal;
   F_Consulta.Destroy;
+end;
+
+procedure TF_Principal.N201Click(Sender: TObject);
+begin
+  MalaDireta2:=TMalaDireta2.Create(Self);
+  MalaDireta2.QuickRep1.PreviewModal;
+  MalaDireta2.Destroy;
+end;
+
+procedure TF_Principal.N301Click(Sender: TObject);
+begin
+  MalaDireta3:=TMalaDireta3.Create(Self);
+  MalaDireta3.QuickRep1.PreviewModal;
+  MalaDireta3.Destroy;
 end;
 
 end.

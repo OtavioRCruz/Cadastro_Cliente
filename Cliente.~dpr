@@ -17,6 +17,5 @@ begin
   Application.Initialize;
   Application.CreateForm(TF_Principal, F_Principal);
   Application.CreateForm(TDM, DM);
-  Application.CreateForm(TF_Consulta, F_Consulta);
   Application.Run;
 end.

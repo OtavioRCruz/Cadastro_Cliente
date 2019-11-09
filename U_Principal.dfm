@@ -1595,7 +1595,6 @@ object F_Principal: TF_Principal
         3333333333333333333333333333333333333333333333333333}
       Layout = blGlyphTop
       NumGlyphs = 2
-      OnClick = btnMalaDiretaClick
     end
   end
   object MainMenu1: TMainMenu
@@ -1631,9 +1630,11 @@ object F_Principal: TF_Principal
         Caption = '&Estiquetas'
         object N201: TMenuItem
           Caption = '&20'
+          OnClick = N201Click
         end
         object N301: TMenuItem
           Caption = '&30'
+          OnClick = N301Click
         end
       end
     end
